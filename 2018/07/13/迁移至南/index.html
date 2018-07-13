@@ -108,25 +108,25 @@
 
 
 
-  <meta name="description" content="写在前面: 一年半之前，使用Hexo和Github Pages搭建了自己的个人博客，没有坚持去写(也不知道去写什么)。今天重拾，望用写作来静下心思考。记录技术、生活、厨艺上的改变。   为什么要有自己的独立博客   目的不在于有多大的关注度，所以不用操心写的好不好。博客主要会写些技术文章，总结并去思考，日后也可以去温故知新。现在BSP(Blog Service Provider)很多，有了账号就">
-<meta name="keywords" content="Hexo,生活">
+  <meta name="description" content="写在前面：经过多个版本，Spring官方放出了Spring Cloud Finchley正式版.本次迁移指南主要针对公司内部项目，由于用到Cloud组件较少，后续还会发一篇开源项目的迁移至南，组件较多。  Spring Boot相关一、依赖版本升级最低支持版本：  Spring Framework 5 Tomcat 8.5 JDK 1.8 Hibernate 5.2 Thymeleaf 3  在">
+<meta name="keywords" content="Spring Cloud,Finchley">
 <meta property="og:type" content="article">
-<meta property="og:title" content="重拾">
-<meta property="og:url" content="https://paomian7.github.io/2018/06/24/开篇/index.html">
+<meta property="og:title" content="Spring Cloud、Boot迁移指南">
+<meta property="og:url" content="https://paomian7.github.io/2018/07/13/迁移至南/index.html">
 <meta property="og:site_name" content="Hiraeth">
-<meta property="og:description" content="写在前面: 一年半之前，使用Hexo和Github Pages搭建了自己的个人博客，没有坚持去写(也不知道去写什么)。今天重拾，望用写作来静下心思考。记录技术、生活、厨艺上的改变。   为什么要有自己的独立博客   目的不在于有多大的关注度，所以不用操心写的好不好。博客主要会写些技术文章，总结并去思考，日后也可以去温故知新。现在BSP(Blog Service Provider)很多，有了账号就">
+<meta property="og:description" content="写在前面：经过多个版本，Spring官方放出了Spring Cloud Finchley正式版.本次迁移指南主要针对公司内部项目，由于用到Cloud组件较少，后续还会发一篇开源项目的迁移至南，组件较多。  Spring Boot相关一、依赖版本升级最低支持版本：  Spring Framework 5 Tomcat 8.5 JDK 1.8 Hibernate 5.2 Thymeleaf 3  在">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-24T10:13:32.833Z">
+<meta property="og:updated_time" content="2018-07-13T09:56:43.598Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="重拾">
-<meta name="twitter:description" content="写在前面: 一年半之前，使用Hexo和Github Pages搭建了自己的个人博客，没有坚持去写(也不知道去写什么)。今天重拾，望用写作来静下心思考。记录技术、生活、厨艺上的改变。   为什么要有自己的独立博客   目的不在于有多大的关注度，所以不用操心写的好不好。博客主要会写些技术文章，总结并去思考，日后也可以去温故知新。现在BSP(Blog Service Provider)很多，有了账号就">
+<meta name="twitter:title" content="Spring Cloud、Boot迁移指南">
+<meta name="twitter:description" content="写在前面：经过多个版本，Spring官方放出了Spring Cloud Finchley正式版.本次迁移指南主要针对公司内部项目，由于用到Cloud组件较少，后续还会发一篇开源项目的迁移至南，组件较多。  Spring Boot相关一、依赖版本升级最低支持版本：  Spring Framework 5 Tomcat 8.5 JDK 1.8 Hibernate 5.2 Thymeleaf 3  在">
 
 
 
 
 
 
-  <link rel="canonical" href="https://paomian7.github.io/2018/06/24/开篇/"/>
+  <link rel="canonical" href="https://paomian7.github.io/2018/07/13/迁移至南/"/>
 
 
 
@@ -136,7 +136,7 @@
   };
 </script>
 
-  <title>重拾 | Hiraeth</title>
+  <title>Spring Cloud、Boot迁移指南 | Hiraeth</title>
   
 
 
@@ -289,7 +289,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://paomian7.github.io/2018/06/24/开篇/">
+    <link itemprop="mainEntityOfPage" href="https://paomian7.github.io/2018/07/13/迁移至南/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="PaoMian">
@@ -306,7 +306,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">重拾
+          <h1 class="post-title" itemprop="name headline">Spring Cloud、Boot迁移指南
               
             
           </h1>
@@ -331,7 +331,7 @@
                 
               
 
-              <time title="创建时间：2018-06-24 16:07:07 / 修改时间：18:13:32" itemprop="dateCreated datePublished" datetime="2018-06-24T16:07:07+08:00">2018-06-24</time>
+              <time title="创建时间：2018-07-13 15:07:07 / 修改时间：17:56:43" itemprop="dateCreated datePublished" datetime="2018-07-13T15:07:07+08:00">2018-07-13</time>
             
 
             
@@ -370,19 +370,52 @@
 
       
         <blockquote>
-<p>写在前面: 一年半之前，使用Hexo和Github Pages搭建了自己的个人博客，没有坚持去写(也不知道去写什么)。今天重拾，望用写作来静下心思考。记录技术、生活、厨艺上的改变。</p>
+<p>写在前面：经过多个版本，Spring官方放出了Spring Cloud Finchley正式版.本次迁移指南主要针对公司内部项目，由于用到Cloud组件较少，后续还会发一篇开源项目的迁移至南，组件较多。</p>
 </blockquote>
-<hr>
-<h1 id="为什么要有自己的独立博客"><a href="#为什么要有自己的独立博客" class="headerlink" title="为什么要有自己的独立博客"></a>为什么要有自己的独立博客</h1><p>   目的不在于有多大的关注度，所以不用操心写的好不好。博客主要会写些技术文章，总结并去思考，日后也可以去温故知新。<br>现在BSP(Blog Service Provider)很多，有了账号就可以去写东西，那为什么现在还要自己去搞个博客？如果用别的的东西，你要忍受上面的广告等等。并且独立的博客就是你自己的，可以自己决定用什么域名、主题、字号、字体，所有都由自己决定。<br>一言以蔽之，独立的才是自己的</p>
-<h1 id="为什么是GitHub和Hexo"><a href="#为什么是GitHub和Hexo" class="headerlink" title="为什么是GitHub和Hexo"></a>为什么是GitHub和Hexo</h1><p>GitHub的伟大想必所有开发者都知道，虽然已被Microsoft收购。<br>GitHub Pages有以下优点：</p>
+<h1 id="Spring-Boot相关"><a href="#Spring-Boot相关" class="headerlink" title="Spring Boot相关"></a>Spring Boot相关</h1><h2 id="一、依赖版本升级"><a href="#一、依赖版本升级" class="headerlink" title="一、依赖版本升级"></a>一、依赖版本升级</h2><p>最低支持版本：</p>
 <ul>
-<li>免费、服务稳定</li>
-<li>可以绑定自己的域名(后续会绑定)</li>
-<li>搭建的博客是轻量级的</li>
-<li>可以使用Markdown标记语言(Mac下我用的UIysses很好用)</li>
+<li>Spring Framework 5</li>
+<li>Tomcat 8.5</li>
+<li>JDK 1.8</li>
+<li>Hibernate 5.2</li>
+<li>Thymeleaf 3</li>
 </ul>
-<p>关于Hexo大家可以google，怎么去和GitHub搭配使用，这里就不贴教程了</p>
-<p>下一篇技术文章准备中，先这样，该去健身了。</p>
+<h2 id="在开始升级之前"><a href="#在开始升级之前" class="headerlink" title="在开始升级之前"></a>在开始升级之前</h2><p>1、在spring boot2.0中，许多配置被重命名或被删除，相应的需要更新application.properties/ application.yml相应配置，spring boot发布了一个spring-boot-properties-migrator模块依赖，加入后，会分析应用程序的环境，还会打印诊断信息，所以升级是必备的</p>
+<pre><code>&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-boot-properties-migrator&lt;/artifactId&gt;
+&lt;/dependency&gt;
+</code></pre><p>注意：迁移完后移除该依赖</p>
+<p>2、spring boot在外部tomcat部署时，需要在启动类中继承SpringBootServletInitializer 并且此次升级需要重新导入包 org.springframework.boot.web.support.SpringBootServletInitializr<br> 变更到<br>org.springframework.boot.web.servlet.support.SpringBootServletInitializer包下，需要重新导入。</p>
+<p>3、项目中使用了JPA，其中JPA重一些方法被废弃，以下是不可用的方法：<br>deleteById 替代 delete<br>findById 替代 findOne</p>
+<p>4、JPA映射实体 id生成策略 所有auto改为指定的GenerationType.IDENTITY，原因是老版本id不会自增，2.0需要指定如下</p>
+<pre><code>@GeneratedValue(strategy = GenerationType.IDENTITY)
+</code></pre><p>5、多数据源<br>DataSourceConfig  DataSourceBuilder迁移到 jdbc下面<br>org.springframework.boot.autoconfigure.jdbc.DataSourceBuilder  org.springframework.boot.jdbc.DataSourceBuilder</p>
+<p>6、druid 版本升到1.1.10        </p>
+<h2 id="三、环境配置变化"><a href="#三、环境配置变化" class="headerlink" title="三、环境配置变化"></a>三、环境配置变化</h2><p>redis连接配置</p>
+<pre><code>pool:
+  jedis: 原有基础上添加的节点
+    max-active: 8
+    min-idle: 0
+    max-idle: 8
+    max-wait: 10000
+</code></pre><p>多数据源连接配置<br>jdbc-url 替代 url 并添加&amp;useSSL=false(数据库版本低导致升级警告，不升级需要加上)</p>
+<h1 id="Spring-Cloud相关"><a href="#Spring-Cloud相关" class="headerlink" title="Spring Cloud相关"></a>Spring Cloud相关</h1><p>Finchley部分组件迁移到Netflix下<br>eureka服务端迁移后:</p>
+<pre><code>&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-cloud-starter-netflix-eureka-server&lt;/artifactId&gt;
+&lt;/dependency&gt;
+</code></pre><p>网关迁移后：</p>
+<pre><code>&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-cloud-starter-netflix-zuul&lt;/artifactId&gt;
+&lt;/dependency&gt;
+</code></pre><p>eureka客户端迁移后:</p>
+<pre><code>&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-cloud-starter-netflix-eureka-client&lt;/artifactId&gt;
+&lt;/dependency&gt;
+</code></pre><p>此次迁移指南主要参考Spring官方文档，链接地址：<a href="https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2.0-Migration-Guide、" target="_blank" rel="noopener">https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2.0-Migration-Guide、</a><br><a href="https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2.0-Release-Notes" target="_blank" rel="noopener">https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2.0-Release-Notes</a></p>
 
       
     </div>
@@ -411,8 +444,8 @@
   <script src="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.min.js"></script>
   <link rel="stylesheet" type="text/css" href="http://jslibs.wuxubj.cn/sweetalert_mini/sweetalert.mini.css">
   <p><span>本文作者:</span><a href="/" title="访问 PaoMian 的个人博客">PaoMian</a></p>
-  <p><span>本文链接:</span><a href="/2018/06/24/开篇/" title="重拾">https://paomian7.github.io/2018/06/24/开篇/</a>
-    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://paomian7.github.io/2018/06/24/开篇/"  aria-label="复制成功！"></i></span>
+  <p><span>本文链接:</span><a href="/2018/07/13/迁移至南/" title="Spring Cloud、Boot迁移指南">https://paomian7.github.io/2018/07/13/迁移至南/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://paomian7.github.io/2018/07/13/迁移至南/"  aria-label="复制成功！"></i></span>
   </p>
   <p><span>版权声明:</span><i class="fa fa-creative-commons"></i> 本博客所有文章均采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"> CC BY-NC-SA 4.0 </a> 许可协议。转载请注明出处！</p>  
 </div>
@@ -435,9 +468,9 @@
         </div>
         <div class="post-tags">
           
-            <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+            <a href="/tags/Spring-Cloud/" rel="tag"># Spring Cloud</a>
           
-            <a href="/tags/生活/" rel="tag"># 生活</a>
+            <a href="/tags/Finchley/" rel="tag"># Finchley</a>
           
         </div>
       
@@ -450,15 +483,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/06/24/开篇/" rel="next" title="重拾">
+                <i class="fa fa-chevron-left"></i> 重拾
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/07/13/迁移至南/" rel="prev" title="Spring Cloud、Boot迁移指南">
-                Spring Cloud、Boot迁移指南 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -595,7 +628,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#为什么要有自己的独立博客"><span class="nav-number">1.</span> <span class="nav-text">为什么要有自己的独立博客</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#为什么是GitHub和Hexo"><span class="nav-number">2.</span> <span class="nav-text">为什么是GitHub和Hexo</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Spring-Boot相关"><span class="nav-number">1.</span> <span class="nav-text">Spring Boot相关</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、依赖版本升级"><span class="nav-number">1.1.</span> <span class="nav-text">一、依赖版本升级</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#在开始升级之前"><span class="nav-number">1.2.</span> <span class="nav-text">在开始升级之前</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、环境配置变化"><span class="nav-number">1.3.</span> <span class="nav-text">三、环境配置变化</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Spring-Cloud相关"><span class="nav-number">2.</span> <span class="nav-text">Spring Cloud相关</span></a></li></ol></div>
             
 
           </div>
